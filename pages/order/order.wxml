@@ -1,0 +1,12 @@
+<view class="containerBox">
+    <view class="address">
+      <view class="aDLeft">
+        <image class="imgAdr" src="../../image/address.png"></image>
+        <view class="addInfo">
+          <text>消息<text style="margin-left:10px;color:#999">10086</text></text>
+          <text class="detAdr">陕西省宝鸡市</text>
+        </view>
+      </view>
+      <image  class="imgJt" src="../../image/jt1.png"></image>
+    </view>
+</view>

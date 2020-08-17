@@ -1,0 +1,68 @@
+<view class="containerBox">
+    <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block>
+          <swiper-item>
+           <image src="../../image/detBg.png"></image>
+          </swiper-item>
+          <swiper-item>
+           <image src="../../image/banner1.jpg"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="yShou">
+        <text>预售新品 优惠不断</text>
+        <text>发货时间:8月20后</text>
+      </view>
+      <view class="detListBox">
+          <view class="detTop">
+            <view class="dBox">
+              <text class="bSend">包邮</text>
+              <text class="tit">陕西徐香猕猴桃</text>
+              <image class="wxImg" src="../../image/wx.png"></image>
+              <image class="pyqImg" src="../../image/pyq.png"></image>
+            </view>
+             <text class="price">￥<text style="font-size:40rpx;color:red">79</text><text>.00</text></text>
+          </view>
+          <view class="gDetail">
+            <view class="gList">
+              <image class="icon" src="../../image/gug.png"></image>
+              <text>规格：5斤装</text>
+            </view>
+           <view class="gList">
+              <image class="icon" src="../../image/lh.png"></image>
+               <text>包装：普通装</text>
+            </view>
+            <view class="gList">
+              <image class="icon" src="../../image/rs.png"></image>
+               <text>预约人数：200人</text>
+            </view>
+          </view>
+          <view class="personDetal">
+            <view class="nameList">
+                <image class="tX" src="../../image/detBg.png"></image>
+                <text class="nameDet">小兴home的水果店</text>
+                <!-- <image class="jt1" src="../../image/jt1.png"></image> -->
+            </view>
+             <view class="nameList" style="height:">
+                <image style="width:60rpx;height:60rpx" src="../../image/address.png"></image>
+                <text class="nameDet">产地：陕西省宝鸡市眉县</text>
+            </view>
+          </view>
+          <view class="imgList">
+            <image src="../../image/img1.png"></image>
+          </view>
+      </view>
+      <view class="gwcBox">
+         <view class="gwxListOne">
+            <image src="../../image/kf.png"></image>
+            <text>客服</text>
+         </view>
+         <view class="gwxListTwo">
+            <text>加入购物车 </text>
+         </view>
+         <view class="gwxListThree">
+            <text>立即购买</text>
+         </view>
+      </view>
+</view> 
