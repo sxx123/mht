@@ -1,0 +1,4 @@
+<view class="containerBox">
+  <image src="../../image/logo.png"></image>
+  <text>©版权为趣查多小程序所有</text>
+</view>

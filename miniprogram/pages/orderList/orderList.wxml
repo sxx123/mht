@@ -1,0 +1,32 @@
+<view class="containerBox">
+  <view class="cardList" bindtap="orderDetail">
+    <view class="orderDetail">
+      <van-card
+        num="2"
+        tag="已发货"
+        price="58.00"
+        desc="一天一颗 水润甜蜜"
+        title="陕西徐香猕猴桃"
+        thumb="../../image/shopImg.png"
+        custom-class="vantCard"
+        custom-class="vantCard"
+        title-class="titClass"
+        desc-class="descClass"
+      >
+      <view slot="tags" class="tagsList">
+          <van-button size="mini" class="btn1">包邮</van-button>
+          <van-button size="mini" class="btn2">5斤装</van-button>
+          <van-button size="mini" class="btn3">礼盒装</van-button>
+      </view>
+      </van-card>
+      <van-cell-group>
+      <van-field
+        value="124121241243141241241"
+        label="订单编号："
+        disabled
+        border="{{ false }}"
+      />
+      </van-cell-group>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "usingComponents": {
+    "van-card": "../../dist/card/index",
+    "van-stepper": "../../dist/stepper/index",
+    "van-field": "../../dist/field/index"
+  }
+}

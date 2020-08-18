@@ -1,0 +1,59 @@
+<view class="header">
+    <view class="user" hoverClass="none">
+      <view class="user_box">
+        <view catchtap="previewImage" class="logo">
+          <image src="{{userInfo.avatarUrl}}"></image>
+          <view class="cu-tag badge {{male==1?'icon-male bg-blue':'icon-female bg-pink'}}"></view>
+        </view>
+        <block wx:if="{{vip}}">
+          <view class="user_info">
+            <view class="user_name">
+              <text>{{userInfo.nickName}}</text>
+              <image src="/images/main/vip.png"></image>
+            </view>
+            <view class="vip_expires">vip到期时间：{{vip_time}}，<button class="joinVip" bindtap='joinVip'>马上续费</button></view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="user_info">
+            <view class="user_name">
+              <text>{{userInfo.nickName}}</text>
+            </view>
+            <view class="vip_expires" bindtap='joinVip'>您还未登录！点击登录
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <image src='https://6661-fatdown-wxapp-sg2p1-1300398887.tcb.qcloud.la/wave.gif?sign=045605c672f482a8c3d428abed669aa7&t=1570674356' mode='scaleToFill' class='gif-wave'></image>
+  </view>
+  <!-- 功能列表 -->
+  <view class="nav">
+    <view bindtap="chooseGeren" data-index="1" class="item">
+      <view class='wallet'>
+        <image src="../../image/dind.png"></image>
+        <text>我的订单</text>
+      </view>
+      <view class="icon">
+        <van-icon name="arrow"></van-icon>
+      </view>
+    </view>
+    <view bindtap="chooseGeren" data-index="2" class="item">
+      <view class='wallet'>
+        <image src="../../image/dz.png"></image>
+        <text>我的地址</text>
+      </view>
+      <view class="icon">
+         <van-icon name="arrow"></van-icon>
+      </view>
+    </view>
+    <view bindtap="chooseGeren" data-index="3" class="item">
+      <view class='wallet'>
+       <image src="../../image/gy.png"></image>
+        <text>关于我们</text>
+      </view>
+      <view class="icon">
+        <van-icon name="arrow"></van-icon>
+      </view>
+    </view>
+  </view>

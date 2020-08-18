@@ -1,0 +1,66 @@
+.containerBox{
+  width: 100%;
+  height: auto;
+  padding: 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.cardList{
+  width: 98%;
+  height: auto;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.btn1{
+  color: #ee0a24;
+  margin-right: 5px;
+  background-color: #fff;
+  width: 63rpx;
+  height: 32rpx;
+  border:1px solid #ee0a24;
+  padding: 2px;
+  box-sizing: border-box;
+  margin-right: 5px;
+  font-size: 10px;
+}
+.btn2{
+  color: #ee0a24;
+  background-color: #fff;
+  width: 63rpx;
+  border:1px solid #ee0a24;
+  padding: 2px;
+  box-sizing: border-box;
+  margin-right: 5px;
+  font-size: 10px;
+}
+.btn3{
+  font-size: 8px;
+  color: #ee0a24;
+  background-color: #fff;
+  width: 63rpx;
+  border:1px solid #ee0a24;
+  padding: 2px;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+.orderDetail{
+  width: 100%;
+}
+.tagsList{
+  margin:6px 0;
+}
+.van-card__bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.van-card {
+  background: #fff !important;
+}

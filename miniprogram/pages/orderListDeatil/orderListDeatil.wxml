@@ -1,0 +1,32 @@
+<view class="containerBox">
+    <view class="orderDetail">
+      <van-card
+        num="1"
+        price="58.00"
+        desc="一天一颗 水润甜蜜"
+        title="陕西徐香猕猴桃"
+        thumb="../../image/shopImg.png"
+        custom-class="vantCard"
+        custom-class="vantCard"
+        title-class="titClass"
+        desc-class="descClass"
+      >
+      <view slot="tags">
+          <van-button size="mini" class="btn3">礼盒装</van-button>
+      </view>
+      </van-card>
+    </view>
+    <view class="priBot">
+        <van-cell-group>
+          <van-cell title="购买数量">
+               x1
+          </van-cell>
+          <van-cell title="规格" value="5斤装" />
+          <van-cell title="邮费" value="包邮" />
+           <van-cell title="订单编号" value="121312312" />
+            <van-cell title="地址" value="西安市" />
+          <van-cell title="商品总金额" value="￥123" />
+           <van-cell title="状态" value="已收货" />
+        </van-cell-group>
+    </view> 
+</view>
