@@ -1,5 +1,5 @@
-// miniprogram/pages/address/address.js
-const App = getApp()
+// miniprogram/pages/ediuAddress/ediuAddress.js
+const App=getApp()
 const api = require('../../api/request')
 var that
 Page({
@@ -8,15 +8,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    username: '',
-    phone: '',
-    address: '',
+    addressId:'',//传过来的Id
+    userName:'',
+    phone:'',
+    address:''
   },
-  //获取用户名
-  valBtnUser: function (e) {
+   //获取用户名
+   valBtnUser: function (e) {
     var val = e.detail
     that.setData({
-      username:val
+      userName:val
     })
   },
   //获取手机号
@@ -33,32 +34,34 @@ Page({
       address:val
     })
   },
-  // 新建地址
-  addressBtn() {
-    const data = {
-      userName:that.data.username,
+  //点击保存编辑
+  addressBtn:function(){
+    let data=that.data.addressId
+    let parmas={
+      userName:that.data.userName,
       phone:that.data.phone,
       address:that.data.address
     }
-    api.newAddress(data).then(res => {
+    api.ediuAddress(data,parmas).then(res=>{
       wx.showToast({
-        title: '新建成功',
+        title: '修改成功',
       })
-      let mytime=setInterval(function(){ 
+      let mytime=setInterval(function(){
         wx.navigateBack({
-          delta:1
+          delta: 1,
         })
         clearInterval(mytime)
-       }, 1000);
+      },1000)
     })
   },
-  //保存编辑地址
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     that=this
+    that.setData({
+      addressId:options.currId
+    })
   },
 
   /**
@@ -72,7 +75,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    let data=that.data.addressId
+    api.adrListId(data).then(res=>{
+      console.log("查询成功",res)
+      that.setData({
+        userName:res.userName,
+        phone:res.phone,
+        address:res.address
+      })
+    })
   },
 
   /**

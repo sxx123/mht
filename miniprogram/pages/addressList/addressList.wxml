@@ -1,0 +1,18 @@
+<view class="containerBox">
+	<view class="address" wx:for="{{adrList}}" wx:key="item">
+		<view class="aDLeft" data-id="{{item._id}}" bindtap="addBtn">
+			<image class="imgAdr" src="../../image/addresss.png"></image>
+			<view class="addInfo">
+				<text>{{item.userName}}<text style="margin-left:10px;color:#999">{{item.phone}}</text></text>
+				<text class="detAdr">{{item.address}}</text>
+			</view>
+		</view>
+		<view class="ediuBtn">
+			<text bindtap="ediuBtn" data-id="{{item._id}}">编辑</text>
+			<text bindtap="delBtn" data-id="{{item._id}}">删除</text>
+		</view>
+	</view>
+  <view class="newBtn">
+    <van-button class="btn" round type="info" bindtap="newBtn">新建地址</van-button>
+  </view>
+</view>

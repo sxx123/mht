@@ -5,6 +5,7 @@
     clearable
     label="用户名"
     placeholder="请输入用户名"
+    bind:change="valBtnUser"
   />
 
   <van-field
@@ -14,26 +15,19 @@
     placeholder="请输入手机号"
     required
     border="{{ false }}"
-  />
-  <van-field
-    value="{{ phone }}"
-    type="text"
-    label="地址"
-    placeholder="请输入地址"
-    required
-    border="{{ false }}"
+    bind:change="valBtnPhone"
   />
    <van-field
-    value="{{ phone }}"
-    type="text"
-    label="详细地址"
-    placeholder="请输入详细地址"
+    value="{{ message }}"
+    label="地址"
     required
+    type="textarea"
+    placeholder="请输入您的详细地址"
+    autosize
     border="{{ false }}"
-  >
-  <!-- <van-area area-list="{{ areaList }}" /> -->
-  </van-field>
+    bind:change="valBtnAdr"
+  />
 </van-cell-group>
 <view class="btnBox">
-  <van-button type="info" custom-class="sunccessBtn" round>保存</van-button>
+  <van-button type="info" custom-class="sunccessBtn" round bindtap="addressBtn">提交</van-button>
 </view>

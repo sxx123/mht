@@ -1,44 +1,30 @@
 <view class="containerBox">
-    <view class="address">
-      <view class="aDLeft">
-        <image class="imgAdr" src="../../image/addresss.png"></image>
-        <view class="addInfo">
-          <text>消息<text style="margin-left:10px;color:#999">10086</text></text>
-          <text class="detAdr">陕西省宝鸡市</text>
-        </view>
-      </view>
-      <image  class="imgJt" src="../../image/jt1.png"></image>
-    </view>
-    <view class="orderDetail">
-      <van-card
-        num="1"
-        price="58.00"
-        desc="一天一颗 水润甜蜜"
-        title="陕西徐香猕猴桃"
-        thumb="../../image/shopImg.png"
-        custom-class="vantCard"
-        custom-class="vantCard"
-        title-class="titClass"
-        desc-class="descClass"
-      >
-      <view slot="tags">
-          <van-button size="mini" class="btn3">礼盒装</van-button>
-      </view>
-      </van-card>
-    </view>
-    <view class="priBot">
-        <van-cell-group>
-          <van-cell title="购买数量">
-                <van-stepper value="{{ 1 }}" bind:change="onChange" />
-          </van-cell>
-          <van-cell title="规格" value="5斤装" />
-          <van-cell title="邮费" value="包邮" />
-          <van-cell title="商品总金额" value="￥123" />
-        </van-cell-group>
-    </view> 
-   <van-submit-bar
-    price="{{ 3050 }}"
-    button-text="提交订单"
-    bind:submit="onSubmit"
-  />
+	<view class="address" bindtap="addressBtn">
+		<view class="aDLeft">
+			<image class="imgAdr" src="../../image/addresss.png"></image>
+			<view class="addInfo">
+				<text>{{userName}}<text style="margin-left:10px;color:#999">{{phone}}</text></text>
+				<text class="detAdr">{{address}}</text>
+			</view>
+		</view>
+		<image class="imgJt" src="../../image/jt1.png"></image>
+	</view>
+	<view class="orderDetail" wx:for="{{detailList}}" wx:key="item">
+		<van-card num="1" price="{{item.shopPri}}" desc="一天一颗 水润甜蜜" title="{{item.shopTit}}" thumb="{{item.shopImg}}" custom-class="vantCard" custom-class="vantCard" title-class="titClass" desc-class="descClass">
+			<view slot="tags">
+				<van-button size="mini" class="btn3">{{item.shopBox}}</van-button>
+			</view>
+		</van-card>
+	</view>
+	<view class="priBot">
+		<van-cell-group>
+			<van-cell title="购买数量">
+				<van-stepper value="{{ shopNum }}" disable-input="true" bind:plus="addBtn" bind:minus="jianBtn" bind:change="onChange" />
+			</van-cell>
+			<van-cell title="规格" value="{{item.shopSpecs}}斤装" />
+			<van-cell title="邮费" value="{{item.shopSend}}" />
+			<van-cell title="商品总金额" value="￥{{totlePrice}}" />
+		</van-cell-group>
+	</view>
+	<van-submit-bar price="{{totlePrice*100}}" button-text="提交订单" bind:submit="onSubmit" />
 </view>

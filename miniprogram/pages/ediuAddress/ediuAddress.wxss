@@ -1,0 +1,10 @@
+/* miniprogram/pages/address/address.wxss */
+.btnBox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40%;
+}
+.sunccessBtn{
+  width: 600rpx;
+}

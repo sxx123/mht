@@ -14,7 +14,7 @@ Page({
       })
     }else if(index==2){
       wx.navigateTo({
-        url: '../address/address',
+        url: '../addressList/addressList',
       })
     } else if(index==3){
        wx.navigateTo({

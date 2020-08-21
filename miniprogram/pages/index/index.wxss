@@ -9,13 +9,14 @@ page{
   display: flex;
   flex-direction: column;
 }
-swiper{
-  /* width: 100%; */
+.swiperBOx{
   height: 400rpx;
   margin: 10px 32rpx;
+}
+swiper{
   position: relative;
 }
-swiper image{
+swiper-item image{
   width: 100%;
   height: 100%;
   border-radius: 16px;
@@ -56,14 +57,15 @@ swiper image{
 }
 .shopList .list{
   width: 100%;
+  height: 320rpx;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
 }
 .list .imgF{
-  width: 300rpx;
-  height:300rpx;
+  width: 280rpx;
+  height:260rpx;
 }
 .shopRight{
   display: flex;

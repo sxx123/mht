@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 64px;
+  box-sizing: border-box;
 }
 .cardList{
   width: 98%;
@@ -63,4 +65,41 @@
 }
 .van-card {
   background: #fff !important;
+}
+.num{
+  display: flex;
+  justify-content: center;
+}
+.num text{
+ font-family: PingFangSC-Regular;
+ font-size: 28rpx;
+ color: #2B2B2B;
+ line-height: 48rpx;
+ margin:0 24rpx;
+
+ }
+.num .numImg1,.num .numImg2{
+ width: 48rpx;
+ height: 48rpx;
+ margin: 0;
+}
+.van-goods-action{
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+van-goods-action-button{
+  display: flex !important;
+  justify-content: flex-end !important;
+  margin: 10px;
+}
+.van-goods-action-button--first.van-goods-action-button--last {
+  width: 40% !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.meg{
+  margin-left: 10px;
+  font-size: 16px;
+  
 }

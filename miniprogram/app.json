@@ -1,16 +1,17 @@
 {
   "pages": [
+    "pages/shopCard/shopCard",
+    "pages/index/index",
     "pages/logs/logs",
     "pages/orderListDeatil/orderListDeatil",
     "pages/orderList/orderList",
-    "pages/shopCard/shopCard",
-    "pages/index/index",
     "pages/address/address",
+    "pages/addressList/addressList",
     "pages/order/order",
     "pages/shopDetail/shopDetail",
     "pages/my/my",
-    "pages/copyright/copyright"
-
+    "pages/copyright/copyright",
+    "pages/ediuAddress/ediuAddress"
   ],
   "window": {
     "backgroundTextStyle": "light",

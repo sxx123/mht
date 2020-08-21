@@ -1,0 +1,8 @@
+	<van-cell-group>
+		<van-field value="{{ userName }}" required clearable label="用户名" placeholder="请输入用户名" bind:change="valBtnUser" />
+		<van-field value="{{ phone }}" type="number" label="手机号" placeholder="请输入手机号" required border="{{ false }}" bind:change="valBtnPhone" />
+		<van-field value="{{ address }}" label="地址" required type="textarea" placeholder="请输入您的详细地址" autosize border="{{ false }}" bind:change="valBtnAdr" />
+	</van-cell-group>
+	<view class="btnBox">
+		<van-button type="info" custom-class="sunccessBtn" round bindtap="addressBtn">提交</van-button>
+	</view>
